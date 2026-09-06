@@ -30,8 +30,8 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/ne-app/adb</url>
-    <connection>scm:git:https://github.com/ne-app/adb.git</connection>
+    <url>https://github.com/ne-app/avkon</url>
+    <connection>scm:git:https://github.com/ne-app/avkon.git</connection>
   </scm>
 
   <properties>

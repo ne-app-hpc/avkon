@@ -4,6 +4,6 @@
 
 #include <ne_app/core/pdf.hpp>
 
-static void GT_ReadPDF(void) {
+static void GT_ReadHTML(void) {
 
 }

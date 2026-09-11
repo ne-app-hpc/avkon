@@ -37,7 +37,7 @@ static void qsi_index_chunks(const std::string& path) {
   std::fstream file(path, std::ios::in | std::ios::binary);
 
   if (!file.is_open()) {
-    ::boost::throw_exception("Failed to open file: " + path);
+    ::boost::throw_exception(std::runtime_error("Failed to open file: " + path));
     return;
   }
 

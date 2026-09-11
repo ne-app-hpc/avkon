@@ -3,3 +3,4 @@
 -I/usr/include/webkitgtk-6.0
 -I/usr/include/gtk-2.0
 -DWEBVIEW_EDGE
+-Ivendor/asl

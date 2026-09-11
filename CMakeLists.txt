@@ -22,6 +22,7 @@ endif()
 set(NEAPP_ADB_SOURCES
   src/ne_app/app/pdf.viewer.cpp
   src/ne_app/app/html.viewer.cpp
+  src/ne_app/quickstart.cpp
   src/ne_app/pdf.cpp
   src/ne_app/store.cpp
 )

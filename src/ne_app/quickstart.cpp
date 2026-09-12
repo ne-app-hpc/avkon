@@ -43,7 +43,7 @@ static void qsi_index_chunks(const std::string& path) {
 
   if (!qsi_index_chunks_too_big()) return;
 
-  std::atomic_flag flg;
+  std::atomic_flag flg = ATOMIC_FLAG_INIT;
 
   while (!flg.test_and_set(std::memory_order_acquire));
 

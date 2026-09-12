@@ -23,7 +23,8 @@ ne_app::core::stream_type& operator<<(
   if (!obj.is_valid(obj.key_)) ne_app::core::throw_pdf_error();
   if (obj.value_.bad()) ne_app::core::throw_pdf_error();
 
-  std::atomic_flag flg;
+  std::atomic_flag flg = ATOMIC_FLAG_INIT;
+  
   while (!flg.test_and_set(std::memory_order_acquire));
 
   os << obj.value_.str();
@@ -42,7 +43,8 @@ ne_app::core::stream_type& operator>>(
 
   if (obj.value_.eof()) ne_app::core::throw_pdf_error();
 
-  std::atomic_flag flg;
+  std::atomic_flag flg = ATOMIC_FLAG_INIT;
+
   while (!flg.test_and_set(std::memory_order_acquire));
 
   ne_app::core::stream_type tmp_is;

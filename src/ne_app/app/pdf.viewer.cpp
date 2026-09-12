@@ -27,7 +27,7 @@ int ::ne_app::pdf::render(const char* path, const size_t len, bool debug) {
   if (!len) return EXIT_FAILURE;
 
   static_assert(std::is_same_v<decltype(path), std::nullptr_t> == false, "path is nullptr_t.");
-  
+
   try {
     webview::webview w(debug, nullptr);
     

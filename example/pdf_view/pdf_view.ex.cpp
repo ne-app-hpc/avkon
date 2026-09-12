@@ -15,8 +15,7 @@ int main(int argc, char** argv) {
     ne_app::tasks::run<void(std::atomic_flag&)>([&argv](std::atomic_flag& fl) { 
       ::ne_app::pdf::render(argv[1], ::strlen(argv[1]));
       fl.clear(std::memory_order_release);
-    },
-                               t);
+    }, t);
 
     return EXIT_SUCCESS;
   } catch (...) {

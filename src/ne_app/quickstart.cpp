@@ -63,6 +63,9 @@ static void qsi_index_chunks(const std::string& path) {
     flg.clear(std::memory_order_release);
   } catch (const std::exception& e) {
     flg.clear(std::memory_order_release);
+
+    std::printf("QS-ERROR: Location: %s", e.what());
+    
     ::boost::throw_with_location(e);
   }
 }
